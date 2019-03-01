@@ -23,4 +23,6 @@ npm install
 
 npm run build:production
 
-cp -r build/. $BASEDIR
+# Replace the build dir
+rm -rf $BASEDIR/build
+cp -r build $BASEDIR
