@@ -24,10 +24,12 @@ npm install
 npm run build:production
 
 # Remove old site content, keeping static files
-ls -1 $BASEDIR \
+ls -Ad "$BASEDIR/"* \
 | grep -v CNAME \
 | grep -v scripts \
 | grep -v README.md \
+| grep -v .git \
+| grep -v .gitignore \
 | xargs rm -r
 
 # Copy new build files in
