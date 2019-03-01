@@ -23,6 +23,12 @@ npm install
 
 npm run build:production
 
-# Replace the build dir
-rm -rf $BASEDIR/docs
-cp -r build $BASEDIR/docs
+# Remove old site content, keeping static files
+ls -1 $BASEDIR \
+| grep -v CNAME \
+| grep -v scripts \
+| grep -v README.md \
+| xargs rm -r
+
+# Copy new build files in
+cp -r build/. $BASEDIR
