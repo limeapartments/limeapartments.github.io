@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lime Apartments Uptown, Minneapolis</title>
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
@@ -9,6 +10,15 @@
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
     <link rel="shortcut icon" type="favicon.ico" />
+    <script>
+      (function() {
+        const redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   <link rel="shortcut icon" href="/favicon.ico"></head>
   <body>
     <div id="fb-root"></div>

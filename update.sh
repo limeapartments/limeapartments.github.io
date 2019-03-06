@@ -27,6 +27,7 @@ ls -Ad "$BASEDIR/"* \
 | grep -v /README.md \
 | grep -v /.git \
 | grep -v /.gitignore \
+| grep -v /404.html \
 | xargs rm -r
 
 # Copy new build files in
